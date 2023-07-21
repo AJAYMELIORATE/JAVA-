@@ -1,0 +1,49 @@
+#include<stdio.h>
+void main()
+{
+    int n,i,count=1;
+    scanf("%d",&n);
+    int arr [n] [n];
+    int cmin=1;
+    int cmax=n;
+    int rmin=1;
+    int rmax=n;
+    while (rmin<=rmax)
+    {
+        for(i=cmin;i<=cmax;i++)
+        {
+            arr [rmin][i]=count++;
+        }
+        for(i=rmin + 1 ;i<=rmax ;i++)
+        {
+            arr [i] [cmax]=count++;
+        }
+        for(i=cmax - 1;i>=cmin ;i--)
+        {
+            arr [rmax][i]=count++;
+        }
+        for(i=rmax-1;i>=rmin+1;i--)
+        {
+            arr [i][cmin]=count++;
+        }
+        rmin++;
+        cmin++;
+        rmax--;
+        cmax--;
+    }
+    for(i=1;i<=n;i++)
+    {
+        for(int j=1;j<=n;j++)
+        {
+            printf("%d ", arr [i][j]);
+        }
+        printf("\n");
+    }
+    
+}
+
+1   2  3  4 5
+16  17 18 196
+15	24	25  20  7
+14	23   22  21 8
+13 12 11 10 9

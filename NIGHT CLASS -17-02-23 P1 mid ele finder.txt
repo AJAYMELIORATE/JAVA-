@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("ENTER THE ARRAY SIZE \n:");
+    scanf("%d",&n);
+    int a[n];
+    int i;
+    int mid_value;
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    mid_value=a[n/2];
+    
+    printf("THE MIDDLE VALUE IS :%d",mid_value);
+}
+
+o/p
+ENTER THE ARRAY SIZE 
+:5
+1 2 3 4 5 6
+THE MIDDLE VALUE IS :3

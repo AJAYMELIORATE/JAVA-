@@ -1,0 +1,37 @@
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("ENTER THE ARRAY ELEMENT SIZE :");
+    scanf("%d",&n);
+    int a[n];
+    int i,j;
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=i+1;j<n;j++)
+        {
+            if(a[i]==a[j])
+            {
+                printf("DUPLICATE ELEMENT IS %d :",a[i]);
+            }
+        }
+    }
+}
+
+
+
+output 
+
+ENTER THE ARRAY ELEMENT SIZE :5
+1
+2
+3
+4
+4
+5
+
+DUPLICATE ELEMENT IS 4 
